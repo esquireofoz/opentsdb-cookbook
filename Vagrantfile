@@ -6,13 +6,14 @@ Vagrant.configure("2") do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
+  config.vm.network :private_network, ip: '172.16.38.10'
   config.vm.hostname = "opentsdb-berkshelf"
 
   # Every Vagrant virtual environment requires a box to build off of.
   if ENV['OPENTSDB_BASE_BOX']
     config.vm.box = ENV['OPENTSDB_BASE_BOX']
   else
-    config.vm.box = "chef/centos-6.5"
+    config.vm.box = "bento/ubuntu-14.04"
   end
   if ENV['OPENTSDB_BASE_BOX_URL']
     config.vm.box_url = ENV['OPENTSDB_BASE_BOX_URL']
@@ -90,6 +91,7 @@ Vagrant.configure("2") do |config|
     chef.json = {
       :java => {
         :install_flavor => 'openjdk',
+        :accept_license_agreement => true,
         :jdk_version => '7',
       }
     }

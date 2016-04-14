@@ -14,7 +14,7 @@ directory tgz_dir do
 end
 
 remote_file "#{tgz_dir}/hbase-#{node['opentsdb']['hbase_version']}.tar.gz" do
-  source "http://www.apache.org/dist/hbase/hbase-#{node['opentsdb']['hbase_version']}/hbase-#{node['opentsdb']['hbase_version']}.tar.gz"
+  source "http://archive.apache.org/dist/hbase/hbase-#{node['opentsdb']['hbase_version']}/hbase-#{node['opentsdb']['hbase_version']}.tar.gz"
   action :create_if_missing
 end
 
