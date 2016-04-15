@@ -98,9 +98,7 @@ Vagrant.configure("2") do |config|
 
     chef.run_list = [      
       "recipe[opentsdb::install]",
-      "recipe[opentsdb::start]",
-      "recipe[opentsdb::install_elasticsearch]",
-      "recipe[opentsdb::install_grafana]"
+      "recipe[opentsdb::start]"
     ]
   end
 end

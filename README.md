@@ -8,6 +8,13 @@ The typical use case is to be able to easily get the latest version.
 
 The cookbook allow you to choose between the current stable (a.k.a 2.0, announced on 2014-05-05) and the bleeding edge, the [next branch](http://opentsdb.net/docs/build/html/).
 
+# Prerequisites
+Ensure the `vagrant-berkshelf` and `vagrant-omnibus` plugins are installed locally before running `vagrant up`:
+
+```
+$ vagrant plugin install vagrant-berkshelf
+$ vagrant plugin install vagrant-omnibus
+```
 
 # Requirements
 
